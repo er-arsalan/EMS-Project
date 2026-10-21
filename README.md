@@ -1,4 +1,4 @@
-# my-first-project
+# SME_Projects
 my journey into software development
 # Hi, I'm Arsalan Ahmad 👋
 
