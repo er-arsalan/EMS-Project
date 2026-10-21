@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <h2>Fibonacci Series</h2>
+
+    <p id="result"></p>
+
+    <script>
+        let a = 0, b = 1;
+        let series = "";
+
+        for (let i = 1; i <= 8; i++) {
+            series += a + " ";
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+
+        document.getElementById("result").innerHTML = series;
+    </script>
+</body>
+</html>

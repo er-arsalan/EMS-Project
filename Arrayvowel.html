@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display all vowel characters in Array</title>
+</head>
+<body>
+
+    <h2>Enter Characters</h2>
+    <input type="text" id="chars" placeholder="Enter characters">
+    <button onclick="displayVowels()">Display Vowels</button>
+    <script>
+        function displayVowels() {
+            let arr = document.getElementById("chars").value.split('');
+            let vowels = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === 'a' || arr[i] === 'e' || arr[i] === 'i' || arr[i] === 'o' || arr[i] === 'u') {
+                vowels.push(arr[i]);
+            }
+        }
+
+        document.write("Array Elements: " + arr + "<br>");
+        document.write("Vowel Characters: " + vowels);
+    }
+    </script>
+
+</body>
+</html>

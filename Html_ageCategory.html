@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Category</title>
+</head>
+<body>
+    <h2>Find Age Category</h2>
+
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="checkAge()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAge() {
+            let age = document.getElementById("age").value;
+
+            if (age === "" || age < 0) {
+                document.getElementById("result").innerHTML = "Enter a valid age";
+            } else if (age < 13) {
+                document.getElementById("result").innerHTML = "Child";
+            } else if (age <= 19) {
+                document.getElementById("result").innerHTML = "Teenager";
+            } else {
+                document.getElementById("result").innerHTML = "Adult";
+            }
+        }
+    </script>
+</body>
+</html>

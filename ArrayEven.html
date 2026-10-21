@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Only Even Numbers in Array</title>
+</head>
+<body>
+
+    <h2>Display Even Numbers</h2>
+    <input type="text" id="numbers" placeholder="Enter numbers">
+    <button onclick="displayEvenNumbers()">Display Even Numbers</button>
+    <script>
+        function displayEvenNumbers() {
+            let arr = document.getElementById("numbers").value.split(',').map(Number);
+            let evenNumbers = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                evenNumbers.push(arr[i]);
+            }
+        }
+
+            document.write("Array Elements: " + arr + "<br>");
+            document.write("Even Numbers: " + evenNumbers);
+        }
+    </script>
+        </body>
+        </html>

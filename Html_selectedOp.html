@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <h2>Arithmetic Calculator</h2>
+
+    <input type="number" id="a" placeholder="Enter first number">
+    <input type="number" id="b" placeholder="Enter second number">
+
+    <br><br>
+
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="calculate('*')">*</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate(op) {
+            let x = document.getElementById("a").value;
+            let y = document.getElementById("b").value;
+
+            if (x === "" || y === "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter both numbers";
+                return;
+            }
+
+            x = Number(x);
+            y = Number(y);
+
+            if (op == '+') {
+                result = x + y;
+            } else if (op == '-') {
+                result = x - y;
+            } else if (op == '/') {
+                if (y == 0) {
+                    document.getElementById("result").innerHTML =
+                        "Cannot divide by zero";
+                    return;
+                }
+                result = x / y;
+            } else if (op == '*') {
+                result = x * y;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Result: " + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Validation</h2>
+        validateFor
+        <form name="myForm" onsubmit="return validation()" method="post">
+            <input type="text" placeholder="enter name" name="sname">
+            <input type="text" placeholder="enter Email" name="semail">
+             <input type="text" placeholder="enter contactNo" name="scontactno">
+              <input type="text" placeholder="enter password" name="spassword">
+            <input type="submit" value="submit">
+            </form>
+            <h2>The oninput Attribute</h2>
+
+Enter your name: <input type="text" id="fname" oninput="upperCase()">
+<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+            <script>
+        function validation () {
+            let name = document.forms["myForm"]["sname"].value;
+            if (name == ""){
+                alert("please fill this");
+                return false;
+            } else if( name.length <3){
+                alert("there should be atleast 3 characters")
+                return false;
+            }
+            let rollno = document.forms["myForm"]["srollno"].value;
+            if ( rollno == "") {
+                alert("rollno must be filled out");
+                return false;
+            }
+            else if (rollno.length<2)
+            {
+               alert("There should be atleast 2 characters");
+               return false;
+            }
+            let contactno = document.forms["myForm"]["scontactno"].value;
+            if (contactno == "") {
+                alert("contact no must be filled");
+                return false;           
+            } else if (contactno.length==10) {
+                    alert("Contact number should be of 10 digits");
+                    return false;
+                }
+            }
+            function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+    </script>
+    </body>
+    </html>

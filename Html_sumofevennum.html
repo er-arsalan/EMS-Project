@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Even Numbers</title>
+</head>
+<body>
+    <h2>Sum of Even Numbers Between 1 to 50</h2>
+
+    <p id="result"></p>
+
+    <script>
+        let sum = 0;
+
+        for (let i = 2; i <= 50; i += 2) {
+            sum = sum + i;
+        }
+
+        document.getElementById("result").innerHTML =
+            "Sum = " + sum;
+    </script>
+</body>
+</html>

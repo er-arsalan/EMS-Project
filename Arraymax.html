@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maximum Value in Array</title>
+</head>
+<body>
+
+    <h2>Find Maximum Value</h2>
+    <input type="text" id="numbers" placeholder="Enter numbers">
+    <button onclick="displayMax()">Display Maximum</button>
+
+    <script>
+        function displayMax() {
+            let arr = document.getElementById("numbers").value.split(',').map(Number);
+            let max = arr[0];
+
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+            document.write("Array Elements: " + arr + "<br>");
+            document.write("Maximum Value: " + max);
+        }
+    </script>
+
+</body>
+</html>

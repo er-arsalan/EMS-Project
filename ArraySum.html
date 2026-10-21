@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of All Numbers in Array</title>
+</head>
+<body>
+
+    <h2>Find Sum</h2>
+    <input type="text" id="num" placeholder="Enter numbers">
+    <button onclick="displaySum()">Display Sum</button>
+    <script>
+        function displaySum() {
+            let arr = document.getElementById("num").value.split(',').map(Number);
+            let sum = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+            document.write("Array Elements: " + arr + "<br>");
+            document.write("Sum of All Numbers: " + sum);
+        }
+    </script>
+
+</body>
+</html>

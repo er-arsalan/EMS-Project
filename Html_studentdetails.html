@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+<body>
+    <h2>Student Details and Grade</h2>
+
+    <script>
+        let name = "Studentname";
+        let rollno = 1234;
+
+        let m1 = 50;
+        let m2 = 60;
+        let m3 = 70;
+        let m4 = 55;
+        let m5 = 80;
+
+        let total = m1 + m2 + m3 + m4 + m5;
+        let percentage = total / 5;
+        let grade;
+
+        if (percentage >= 90)
+            grade = "A+";
+        else if (percentage >= 80)
+            grade = "A";
+        else if (percentage >= 70)
+            grade = "B";
+        else if (percentage >= 60)
+            grade = "C";
+        else if (percentage >= 50)
+            grade = "D";
+        else
+            grade = "F";
+
+        document.write("Name: " + name + "<br>");
+        document.write("Roll No: " + rollno + "<br>");
+        document.write("Subject Marks: 50, 60, 70, 55, 80<br>");
+        document.write("Total Marks: " + total + "<br>");
+        document.write("Percentage: " + percentage + "%<br>");
+        document.write("Grade: " + grade);
+    </script>
+</body>
+</html>
